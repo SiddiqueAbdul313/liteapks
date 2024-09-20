@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { TbMenu2 } from "react-icons/tb";
 import { TbMenuDeep } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,30 +18,30 @@ const Navbar = () => {
           <button onClick={toggleMenu} className="text-white mr-4 md:hidden">
             {isOpen ? <TbMenuDeep /> : <TbMenu2 />}
           </button>
-          <div className="text-white text-lg font-bold">LITEAPKS.COM</div>
+          <a className="text-white text-lg font-bold" href="/">LITEAPKS.COM</a>
         </div>
 
         {/* Nav links for medium screens and above */}
         <ul className="hidden md:flex md:gap-6 md:ml-6">
           <li>
-            <a href="#" className="text-white hover:underline">
+            <Link to="/" className="text-white hover:underline">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline">
+            <Link to="/apps" className="text-white hover:underline">
               Apps
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline">
+            <Link to="/games" className="text-white hover:underline">
               Games
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-white hover:underline">
+            <Link to="/news" className="text-white hover:underline">
               News
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -51,7 +52,7 @@ const Navbar = () => {
             placeholder="Search"
             className="p-1 rounded md:mr-2 w-full outline-none"
           />
-          <button className="text-zinc-500 absolute right-2">
+          <button className="text-zinc-500 absolute right-2 md:right-3">
             <CiSearch />
           </button>
         </div>
@@ -71,29 +72,49 @@ const Navbar = () => {
         >
           <ul className="p-4 mt-2">
             <li className="py-2">
-              <a href="#" className="text-black hover:underline">
+              <Link
+                to="/"
+                className="text-black hover:underline"
+                onClick={toggleMenu} // Close the menu after click
+              >
                 Menu
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a href="#" className="text-black hover:underline">
+              <Link
+                to="/"
+                className="text-black hover:underline"
+                onClick={toggleMenu}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a href="#" className="text-black hover:underline">
+              <Link
+                to="/apps"
+                className="text-black hover:underline"
+                onClick={toggleMenu}
+              >
                 Apps
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a href="#" className="text-black hover:underline">
+              <Link
+                to="/games"
+                className="text-black hover:underline"
+                onClick={toggleMenu}
+              >
                 Games
-              </a>
+              </Link>
             </li>
             <li className="py-2">
-              <a href="#" className="text-black hover:underline">
+              <Link
+                to="/news"
+                className="text-black hover:underline"
+                onClick={toggleMenu}
+              >
                 News
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
