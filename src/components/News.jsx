@@ -2,14 +2,14 @@ import { useState } from "react";
 import NewsCard from "./NewsCard";
 import { newsData } from "../constants/dummyData";
 
-const NewsSection = () => {
+const News = () => {
   const [viewAll, setViewAll] = useState(false);
 
   const handleViewAll = () => {
     setViewAll(!viewAll);
   };
 
-  const displayedNews = viewAll ? newsData : newsData.slice(0, 3);
+  const displayedNews = viewAll ? newsData : newsData.slice(0, 4);
 
   return (
     <div>
@@ -31,4 +31,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default News;
