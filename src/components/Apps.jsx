@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { appsData } from "../constants/dummyData";
+import Categories from "./Categories";
 
 function Apps() {
   const [viewAll, setViewAll] = useState(false);
@@ -57,6 +58,7 @@ function Apps() {
           </div>
         ))}
       </div>
+      {viewAll && <Categories />}
 
       {selectedApp && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
