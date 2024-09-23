@@ -25,7 +25,7 @@ function Games() {
   return (
     <div className="p-6">
       <div className="flex items-center justify-between mb-5">
-        <h2 className="text-sm font-bold">Games - Latest Updates</h2>
+        <h2 className="text-sm sm:text-xl font-bold">Games - Latest Updates</h2>
         <button
           className="bg-green-500 text-white p-2 rounded text-sm"
           onClick={handleViewAll}
@@ -58,13 +58,13 @@ function Games() {
       </div>
 
       {selectedGame && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-md max-w-lg w-full mx-2">
             <h2 className="text-xl font-bold mb-4">{selectedGame.name}</h2>
             <img
               src={selectedGame.image || "https://via.placeholder.com/150"}
               alt={selectedGame.name}
-              className="w-full h-64 object-cover mb-4"
+              className="w-full h-64 object-cover mb-4 rounded-lg"
             />
             <p>
               <strong>Version:</strong> {selectedGame.version}

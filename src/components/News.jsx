@@ -44,13 +44,13 @@ const News = () => {
       </div>
 
       {selectedNews && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-md max-w-lg w-full mx-2">
             <h2 className="text-xl font-bold mb-4">{selectedNews.title}</h2>
             <img
               src={selectedNews.image || "https://via.placeholder.com/150"}
               alt={selectedNews.title}
-              className="w-full h-64 object-contain mb-4"
+              className="w-full h-64 object-contain mb-4 rounded-lg"
             />
             <p>
               <strong>Category:</strong> {selectedNews.category}
