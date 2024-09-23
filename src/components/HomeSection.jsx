@@ -23,7 +23,7 @@ const HomeSection = () => {
           className="bg-green-500 text-white px-4 py-2 rounded"
           onClick={handleViewAllNews}
         >
-          <a href="/news">View All</a>
+          {viewAllNews ? "Show Less" : "View All"}
         </button>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -38,7 +38,7 @@ const HomeSection = () => {
           className="bg-green-500 text-white px-4 py-2 rounded"
           onClick={handleViewAllApps}
         >
-         <a href="/apps">View All</a>
+          {viewAllApps ? "Show Less" : "View All"}
         </button>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -53,7 +53,7 @@ const HomeSection = () => {
           className="bg-green-500 text-white px-4 py-2 rounded"
           onClick={handleViewAllGames}
         >
-          <a href="/games">View All</a>
+          {viewAllGames ? "Show Less" : "View All"}
         </button>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
